@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var pizza = prompt("Введите номер пиццы: 1 - Маргарита, 2 - Пепперони, 3 - Гаваи, 4 - С морепродуктами, 5 - Мясная");
+
+		var cost = 0;
+
+		switch (pizza) {
+			case "1": 
+				{
+					var size = prompt("Введите радиус пиццы: 20, 30, 40"); 
+					switch (size) {
+						case "20":
+							{
+								cost += 100;
+								document.write("Пицца Маргарита" + "<p>" + "<img src='images/images.jpg' width='100' height='100'" + "<p>");
+							}
+						break;
+						case "30":
+							{
+								cost += 130;
+								document.write("Пицца Маргарита" + "<p>" + "<img src='images/images.jpg' width='200' height='200'" + "<p>");
+							}
+						break;
+						case "40":
+							{
+								cost += 150;
+								document.write("Пицца Маргарита" + "<p>" + "<img src='images/images.jpg' width='300' height='300'" + "<p>");
+							}
+						break;
+						default:
+							{
+								document.write("Вы не ввели радиус пиццы");
+							}
+					}
+				}
+			break;
+			case "2": 
+				{
+					var size = prompt("Введите радиус пиццы: 20, 30, 40"); 
+					switch (size) {
+						case "20":
+							{
+								cost += 115;
+								document.write("Пицца Пепперони" + "<p>" + "<img src='images/images2.jpg' width='100' height='100'" + "<p>");
+							}
+						break;
+						case "30":
+							{
+								cost += 135;
+								document.write("Пицца Пепперони" + "<p>" + "<img src='images/images2.jpg' width='200' height='200'" + "<p>");
+							}
+						break;
+						case "40":
+							{
+								cost += 155;
+								document.write("Пицца Пепперони" + "<p>" + "<img src='images/images2.jpg' width='300' height='300'" + "<p>");
+							}
+						break;
+						default:
+							{
+								document.write("Вы не ввели радиус пиццы");
+							}
+					}
+				}
+			break;
+			case "3": 
+				{
+					var size = prompt("Введите радиус пиццы: 20, 30, 40"); 
+					switch (size) {
+						case "20":
+							{
+								cost += 125;
+								document.write("Пицца Гаваи" + "<p>" + "<img src='images/images3.jpg' width='100' height='100'" + "<p>");
+							}
+						break;
+						case "30":
+							{
+								cost += 145;
+								document.write("Пицца Гаваи" + "<p>" + "<img src='images/images3.jpg' width='200' height='200'" + "<p>");
+							}
+						break;
+						case "40":
+							{
+								cost += 165;
+								document.write("Пицца Гаваи" + "<p>" + "<img src='images/images3.jpg' width='300' height='300'" + "<p>");
+							}
+						break;
+						default:
+							{
+								document.write("Вы не ввели радиус пиццы");
+							}
+					}
+				}
+			break;
+			case "4": 
+				{
+					var size = prompt("Введите радиус пиццы: 20, 30, 40"); 
+					switch (size) {
+						case "20":
+							{
+								cost += 145;
+								document.write("Пицца c морепродуктами" + "<p>" + "<img src='images/images4.jpg' width='100' height='100'" + "<p>");
+							}
+						break;
+						case "30":
+							{
+								cost += 165;
+								document.write("Пицца c морепродуктами" + "<p>" + "<img src='images/images4.jpg' width='200' height='200'" + "<p>");
+							}
+						break;
+						case "40":
+							{
+								cost += 185;
+								document.write("Пицца c морепродуктами" + "<p>" + "<img src='images/images4.jpg' width='300' height='300'" + "<p>");
+							}
+						break;
+						default:
+							{
+								document.write("Вы не ввели радиус пиццы");
+							}
+					}
+				}
+			break;
+			case "5": 
+				{
+					var size = prompt("Введите радиус пиццы: 20, 30, 40"); 
+					switch (size) {
+						case "20":
+							{
+								cost += 140;
+								document.write("Пицца мясная" + "<p>" + "<img src='images/images5.jpg' width='100' height='100'" + "<p>");
+							}
+						break;
+						case "30":
+							{
+								cost += 160;
+								document.write("Пицца мясная" + "<p>" + "<img src='images/images5.jpg' width='200' height='200'" + "<p>");
+							}
+						break;
+						case "40":
+							{
+								cost += 180;
+								document.write("Пицца мясная" + "<p>" + "<img src='images/images5.jpg' width='300' height='300'" + "<p>");
+							}
+						break;
+						default:
+							{
+								document.write("Вы не ввели радиус пиццы");
+							}
+					}
+				}
+			break;
+			default:
+				{
+					document.write("Вы не ввели название пиццы");
+				}
+		}
+		if (cost != 0) {
+			var promocode = prompt("У вас есть промо-код на скидку 20, 30 грн?");
+			switch (promocode) {
+				case "20": 
+					{
+						cost -= 20;
+						document.write("<p> Cтоимость выбранной пиццы cо скидкой - " + cost + " грн");
+					}
+				break;
+				case "30": 
+					{
+						cost -= 30;
+						document.write("<p> Cтоимость выбранной пиццы cо скидкой - " + cost + " грн");
+					}
+				break;
+				default: 
+					{
+						document.write("<p> Cтоимость выбранной пиццы - " + cost + " грн");
+					}
+			}
+			
+		}
+		else {
+			pizza = prompt("Ошибка!");
+		}
+	</script>
+</body>
+</html>
